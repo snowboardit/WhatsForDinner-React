@@ -1,5 +1,5 @@
 /**
- * Notion.js - API interface for Notion
+ * Food.js - API interface for Notion
  * Built by Max Lareau
  * https://github.com/snowboardit
  * ** Assumes env:NOTION_TOKEN is set to integration secret **
@@ -16,6 +16,12 @@ export class Food {
         this.notion = new Client({ auth: process.env.NOTION_TOKEN });
     }
 
+
+
+    /**
+     * getFoodData
+     * @returns [{name: String, ingredients: String}]
+     */
     async getFoodData() {
 
         // Variables
@@ -30,15 +36,11 @@ export class Food {
         if (results) {
             results.forEach(f => {
 
-                // console.log("Food Name: \n")
-                // console.log(f["properties"]["Name"]["title"][0]["plain_text"])
-                // console.log("\nFood Ingredients: \n")
-                // console.log(f["properties"]["Ingredients"]["rich_text"][0]["plain_text"])
-
                 food.push({
                     name: f["properties"]["Name"]["title"][0]["plain_text"] || "Unknown",
                     ingredients: f["properties"]["Ingredients"]["rich_text"][0]["plain_text"] || "No ingredients"
                 })
+
             });
         }
 
@@ -47,6 +49,4 @@ export class Food {
         return food
 
     }
-
-
 }
