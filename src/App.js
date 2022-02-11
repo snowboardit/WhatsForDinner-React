@@ -1,33 +1,57 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { getFood, chooseRandomFood } from './model/food';
+import Header from './components/Header'
+import FoodCard from './components/FoodCard';
+import Button from './components/Button'
 
-function App() {
+
+// App class
+const App = () => {
+
+  // Set state
+  const [food, setFood] = useState({
+    name: 'Name',
+    ingredients: ['Ingredient 1', 'Ingredient 2', 'Ingredient 3',],
+    image: ''
+  });
+  const [isLoading, setLoading] = useState(true);
+
+  // init food state
+  useEffect(async () => {
+    const result = await chooseRandomFood();
+    if (result) {
+      setFood(result)
+      setLoading(false);
+    }
+  }, []);
+
+
+  // Button click handler
+  async function buttonClicked() {
+    const result = await chooseRandomFood();
+    if (result) {
+      setFood(result);
+      setLoading(false);
+    }
+  }
+
+
+  // Return app jsx
   return (
-    <main className='container'>
 
-      <h1>What's for dinner?</h1>
+    <main className='container' >
 
-      <section>
+      <Header />
 
-        <div className='left'>
-          <h3><strong>Tacos</strong></h3>
-          <h5>Ingredients:</h5>
-          <ul>
-            <li>Beef</li>
-            <li>Taco seasoning</li>
-            <li>Hard and soft shells</li>
-          </ul>
-        </div>
+      <FoodCard food={food} isLoading={isLoading} />
 
-        <div className='right'>
-          <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b967884e-483e-472a-af54-ed5347c3aa6f/tacos.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220208T025649Z&X-Amz-Expires=86400&X-Amz-Signature=115a77091b62a6d871dcbbe7906b24830f64236f0a6039d4235fd6ee2c9d31df&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22tacos.png%22&x-id=GetObject" alt="tacos" />
-        </div>
-
-      </section>
-
-      <button>Click here to find out!</button>
+      <Button onClick={buttonClicked} />
 
     </main>
-  );
-}
+
+  )
+
+};
 
 export default App;
