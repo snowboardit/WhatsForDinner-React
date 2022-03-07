@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "production": "react-scripts build && npm /server/app.js"
+    "production": "react-scripts build && cd ./server && npm ./app.js"
   },
   "browserslist": {
     "production": [
