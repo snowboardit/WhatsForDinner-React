@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# What's for Dinner?
+### A React app to choose a random dinner from a Notion database
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Set Environment Variables
+NOTION_TOKEN: Notion token for access to the food database
 
 ## Available Scripts
 

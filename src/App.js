@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { getFood, chooseRandomFood } from './model/food';
+import { chooseRandomFood } from './model/food';
 import Header from './components/Header'
 import FoodCard from './components/FoodCard';
 import Button from './components/Button'
