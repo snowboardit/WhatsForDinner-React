@@ -1,9 +1,24 @@
 # What's for Dinner?
-### A React app to choose a random dinner from a Notion database
+### A React app to choose a random dinner from a Notion database. A swift solution to a frequently asked question.
+<img alt='app screenshot' width='679.5' height='587.25' src='https://user-images.githubusercontent.com/23141894/156975243-c9335115-782a-4421-8e8e-f8a6b73facf3.png'>
 
+### Sample Data
+| Food                    	| Ingredients                                                                               	| LinkToImage 	|
+|-------------------------	|-------------------------------------------------------------------------------------------	|-------------	|
+| Tacos                   	| Beef, turkey, or plant-based<br>Vegges<br>Sauce<br>Hot sauce <br>Hard, soft shells, bowls 	| #            	|
+| Cheesy Sweet Potatos    	| 1 or 2 Sweet potatoes<br>Cheddar/sharp cheese<br>Onions                                   	| #            	|
+| Baked Salmon            	| Salmon                                                                                    	| #            	|
+| Tortilla Mexican Soup   	| Black beans<br>Tortilla chips<br>Vegetable broth                                          	| #           	|
+| Homemade Pizza          	| Pizza dough<br>Red sauce<br>Pizza cheese<br>Veges                                         	| #           	|
+| Chicken teriyaki bowls  	| Chicken Teriyaki sauce<br>Rice                                                            	| #           	|
+| Chickpea meal           	| Garbonzo beans<br>Seasoning <br>Veges                                                     	| #           	|
+| Spaghetti and Meatballs 	| Spaghetti<br>Meatballs <br>Red sauce                                                      	| #           	|
+| Chicken Alfredo         	| Chicken breast<br>Alfredo sauce<br>Seasoning                                              	| #           	|
+
+---
 
 ## Set Environment Variables
-NOTION_TOKEN: Notion token for access to the food database
+**`NOTION_TOKEN`**: Notion token for access to the food database
 
 ## Available Scripts
 
