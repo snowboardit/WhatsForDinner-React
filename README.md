@@ -1,5 +1,5 @@
 # 🍽 What's for Dinner?
-### A React app to choose a random dinner from a Notion database. A swift and flexible solution to a frequently asked question.
+### A React app to choose a random dinner from a Notion database. A simple, yet flexible solution to a frequently asked question.
 <img alt='app screenshot' width='679.5' height='587.25' src='https://user-images.githubusercontent.com/23141894/156975243-c9335115-782a-4421-8e8e-f8a6b73facf3.png'>
 
 ### Sample Data ([View the database here](https://maxlareau.notion.site/a0da46d77a624675897f79dcc71dd00d?v=accca9df03dd4aed850d303ff8e64c88))
