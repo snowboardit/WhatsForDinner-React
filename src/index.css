@@ -1,7 +1,10 @@
-/* BODY */
-body {
+* {
   margin: 0;
   padding: 0;
+}
+
+/* BODY */
+body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

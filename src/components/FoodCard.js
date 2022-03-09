@@ -17,17 +17,19 @@ const FoodCard = ({ food, isLoading }) => {
             <section>
 
                 <div className='left'>
-                    <h3><strong>{food.name ? food.name : 'No food'}</strong></h3>
-                    <h5>Ingredients:</h5>
-                    <ul>
-                        {food.ingredients ? food.ingredients.map((i, index) => {
-                            return (
-                                <li key={index}>
-                                    {i}
-                                </li>
-                            )
-                        }) : <li>No Ingredients</li>}
-                    </ul>
+                    <div className="left-wrapper">
+                        <h3><strong>{food.name ? food.name : 'No food'}</strong></h3>
+                        <h5>Ingredients:</h5>
+                        <ul>
+                            {food.ingredients ? food.ingredients.map((i, index) => {
+                                return (
+                                    <li key={index}>
+                                        {i}
+                                    </li>
+                                )
+                            }) : <li>No Ingredients</li>}
+                        </ul>
+                    </div>
                 </div>
 
                 <div className='right'>
